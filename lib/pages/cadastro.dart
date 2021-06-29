@@ -15,6 +15,9 @@ class _cadastroState extends State<cadastro> {
   String tipsangue = '';
   String cpf = '';
   String senha = '';
+  String title = 'DopDownButton';
+  List _sexo = ['Masculino', 'Feminino'];
+  List tipo_sanguineo = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+' 'O-'];
 
   @override
   Widget build(BuildContext context) {
@@ -117,7 +120,7 @@ class _cadastroState extends State<cadastro> {
                   },
                   obscureText: true,
                   decoration: InputDecoration(
-                    labelText: "senha",
+                    labelText: "Senha",
                     labelStyle: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 20,

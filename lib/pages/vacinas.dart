@@ -159,7 +159,7 @@ class _vacinasState extends State<vacinas> {
                               context,
                               MaterialPageRoute(
                                   builder: (BuildContext context) =>
-                                      aplicada()));
+                                      Aplicadas()));
                         } else {
                           print("Falta dados");
                         }

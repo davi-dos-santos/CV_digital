@@ -1,13 +1,13 @@
 import 'package:doglife/login_page.dart';
 import 'package:doglife/pages/Atrasadas.dart';
 import 'package:doglife/pages/Proxima_Vacina.dart';
-import 'package:doglife/pages/efeitos.dart';
+import 'package:doglife/pages/aplicada.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Aplicadas extends StatefulWidget {
+class Efeitos extends StatefulWidget {
   @override
-  _AplicadasState createState() => _AplicadasState();
+  _EfeitosState createState() => _EfeitosState();
 }
 
 @override
@@ -16,7 +16,7 @@ State<StatefulWidget> createState() {
   throw UnimplementedError();
 }
 
-class _AplicadasState extends State<Aplicadas> {
+class _EfeitosState extends State<Efeitos> {
   final navigationKey = GlobalKey<NavigatorState>();
 
   @override
@@ -26,9 +26,9 @@ class _AplicadasState extends State<Aplicadas> {
         navigatorKey: navigationKey,
         home: Scaffold(
           appBar: AppBar(
-            title: const Text('Aplicadas'),
-            actions: <Widget>[
-              PopupMenuButton(onSelected: (value) {
+            title: const Text('Efeitos'),
+            actions: [
+              PopupMenuButton<String>(onSelected: (value) {
                 print(value);
               }, itemBuilder: (BuildContext contesxt) {
                 return [
@@ -57,7 +57,7 @@ class _AplicadasState extends State<Aplicadas> {
                 (int menu) {
                   if (menu == 1) {
                     navigationKey.currentState.push(
-                        MaterialPageRoute(builder: (context) => Aplicadas()));
+                        MaterialPageRoute(builder: (context) => Efeitos()));
                   } else if (menu == 2) {
                     navigationKey.currentState.push(
                         MaterialPageRoute(builder: (context) => Efeitos()));
@@ -76,29 +76,5 @@ class _AplicadasState extends State<Aplicadas> {
             ],
           ),
         ));
-  }
-}
-
-class Vida extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(10),
-      child: Center(
-        child: Center(
-          child: Column(
-            children: <Widget>[
-              RaisedButton(
-                child: Text("Efeitos 1"),
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Efeitos()));
-                },
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
   }
 }

@@ -1,13 +1,12 @@
 import 'package:doglife/login_page.dart';
 import 'package:doglife/pages/Atrasadas.dart';
-import 'package:doglife/pages/Proxima_Vacina.dart';
 import 'package:doglife/pages/efeitos.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Aplicadas extends StatefulWidget {
+class Proxima_Vacina extends StatefulWidget {
   @override
-  _AplicadasState createState() => _AplicadasState();
+  _Proxima_VacinaState createState() => _Proxima_VacinaState();
 }
 
 @override
@@ -16,7 +15,7 @@ State<StatefulWidget> createState() {
   throw UnimplementedError();
 }
 
-class _AplicadasState extends State<Aplicadas> {
+class _Proxima_VacinaState extends State<Proxima_Vacina> {
   final navigationKey = GlobalKey<NavigatorState>();
 
   @override
@@ -57,7 +56,7 @@ class _AplicadasState extends State<Aplicadas> {
                 (int menu) {
                   if (menu == 1) {
                     navigationKey.currentState.push(
-                        MaterialPageRoute(builder: (context) => Aplicadas()));
+                        MaterialPageRoute(builder: (context) => Efeitos()));
                   } else if (menu == 2) {
                     navigationKey.currentState.push(
                         MaterialPageRoute(builder: (context) => Efeitos()));

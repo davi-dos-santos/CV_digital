@@ -1,4 +1,5 @@
-import 'package:doglife/login_page.dart';
+//import 'package:doglife/login_page.dart';
+import 'package:doglife/login.page.dart';
 import 'package:doglife/pages/Atrasadas.dart';
 import 'package:doglife/pages/efeitos.dart';
 import 'package:flutter/cupertino.dart';

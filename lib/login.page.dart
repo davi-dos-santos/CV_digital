@@ -23,7 +23,7 @@ class LoginPage extends StatelessWidget {
             TextFormField(
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
-                labelText: "CPF",
+                labelText: "CPF.",
                 labelStyle: TextStyle(
                   color: Colors.black38,
                   fontWeight: FontWeight.w400,
